@@ -10,6 +10,11 @@
 		6B4B4F3319DF30A50017454E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F3219DF30A50017454E /* main.m */; };
 		6B4B4F3619DF30A50017454E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F3519DF30A50017454E /* AppDelegate.m */; };
 		6B4B4F4D19DF30A50017454E /* FileDeserializeBenchmarkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F4C19DF30A50017454E /* FileDeserializeBenchmarkingTests.m */; };
+		6B4B4F5B19DF34AB0017454E /* JSONFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F5A19DF34AB0017454E /* JSONFileDeserialize.m */; };
+		6B4B4F5E19DF35270017454E /* PlistFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F5D19DF35270017454E /* PlistFileDeserialize.m */; };
+		6B4B4F6219DF37580017454E /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6119DF37580017454E /* ItemModel.m */; };
+		6B4B4F6419DF376B0017454E /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6319DF376B0017454E /* data.plist */; };
+		6B4B4F6619DF377E0017454E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6519DF377E0017454E /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +36,14 @@
 		6B4B4F4619DF30A50017454E /* FileDeserializeBenchmarkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileDeserializeBenchmarkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4B4F4B19DF30A50017454E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4B4F4C19DF30A50017454E /* FileDeserializeBenchmarkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileDeserializeBenchmarkingTests.m; sourceTree = "<group>"; };
+		6B4B4F5919DF34AB0017454E /* JSONFileDeserialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFileDeserialize.h; sourceTree = "<group>"; };
+		6B4B4F5A19DF34AB0017454E /* JSONFileDeserialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONFileDeserialize.m; sourceTree = "<group>"; };
+		6B4B4F5C19DF35270017454E /* PlistFileDeserialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistFileDeserialize.h; sourceTree = "<group>"; };
+		6B4B4F5D19DF35270017454E /* PlistFileDeserialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistFileDeserialize.m; sourceTree = "<group>"; };
+		6B4B4F6019DF37580017454E /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		6B4B4F6119DF37580017454E /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		6B4B4F6319DF376B0017454E /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		6B4B4F6519DF377E0017454E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,11 @@
 		6B4B4F2F19DF30A50017454E /* FileDeserializeBenchmarking */ = {
 			isa = PBXGroup;
 			children = (
+				6B4B4F5F19DF37430017454E /* Data */,
+				6B4B4F5919DF34AB0017454E /* JSONFileDeserialize.h */,
+				6B4B4F5A19DF34AB0017454E /* JSONFileDeserialize.m */,
+				6B4B4F5C19DF35270017454E /* PlistFileDeserialize.h */,
+				6B4B4F5D19DF35270017454E /* PlistFileDeserialize.m */,
 				6B4B4F3419DF30A50017454E /* AppDelegate.h */,
 				6B4B4F3519DF30A50017454E /* AppDelegate.m */,
 				6B4B4F3019DF30A50017454E /* Supporting Files */,
@@ -103,6 +121,17 @@
 				6B4B4F4B19DF30A50017454E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B4B4F5F19DF37430017454E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6B4B4F6019DF37580017454E /* ItemModel.h */,
+				6B4B4F6119DF37580017454E /* ItemModel.m */,
+				6B4B4F6319DF376B0017454E /* data.plist */,
+				6B4B4F6519DF377E0017454E /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +214,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4B4F6419DF376B0017454E /* data.plist in Resources */,
+				6B4B4F6619DF377E0017454E /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B4B4F5E19DF35270017454E /* PlistFileDeserialize.m in Sources */,
+				6B4B4F6219DF37580017454E /* ItemModel.m in Sources */,
 				6B4B4F3619DF30A50017454E /* AppDelegate.m in Sources */,
 				6B4B4F3319DF30A50017454E /* main.m in Sources */,
+				6B4B4F5B19DF34AB0017454E /* JSONFileDeserialize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
