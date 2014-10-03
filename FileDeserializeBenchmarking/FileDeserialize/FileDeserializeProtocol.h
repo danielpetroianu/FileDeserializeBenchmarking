@@ -1,5 +1,5 @@
 //
-//  JSONFileDeserialize.h
+//  FileDeserializeProtocol.h
 //  FileDeserializeBenchmarking
 //
 //  Created by Petroianu Daniel on 10/3/14.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JSONFileDeserialize : NSObject
+@protocol FileDeserializeProtocol <NSObject>
+
+- (NSDictionary *)deserializeFile:(NSString *)fileName;
 
 @end

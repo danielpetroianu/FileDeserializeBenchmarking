@@ -6,11 +6,26 @@
 //  Copyright (c) 2014 Petroianu Daniel. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import <Foundation/Foundation.h>
+#import "ItemModel.h"
+
+
+#import "JSONFileDeserialize.h"
+#import "PlistFileDeserialize.h"
 
 int main(int argc, char * argv[]) {
 	@autoreleasepool {
-	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+		
+		NSLog(@"Start Testing");
+		
+		id<FileDeserializeProtocol> jsonDeserializer = [[JSONFileDeserialize alloc] init];
+		
+		NSDictionary *result = [jsonDeserializer deserializeFile:@"data.json"];
+		
+		NSLog(@"%@", result);
+		
+		
+		
+		return 0;
 	}
 }

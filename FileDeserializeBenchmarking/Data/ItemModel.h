@@ -10,6 +10,8 @@
 
 @interface ItemModel : NSObject
 
+- (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
+
 @property(assign, nonatomic) NSInteger uid;
 @property(copy, nonatomic) NSString *firstName;
 @property(copy, nonatomic) NSString *lastName;

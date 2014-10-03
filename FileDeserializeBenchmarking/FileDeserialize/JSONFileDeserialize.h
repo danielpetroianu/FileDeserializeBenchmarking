@@ -1,5 +1,5 @@
 //
-//  PlistFileDeserialize.h
+//  JSONFileDeserialize.h
 //  FileDeserializeBenchmarking
 //
 //  Created by Petroianu Daniel on 10/3/14.
@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FileDeserializeProtocol.h"
 
-@interface PlistFileDeserialize : NSObject
+@interface JSONFileDeserialize : NSObject <FileDeserializeProtocol>
 
 @end
