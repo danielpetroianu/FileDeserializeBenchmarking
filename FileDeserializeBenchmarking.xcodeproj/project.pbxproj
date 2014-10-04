@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B0A4BBF19DFEE5300FE799D /* data_dictionary_root_1.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB319DFEE5300FE799D /* data_dictionary_root_1.json */; };
+		6B0A4BC019DFEE5300FE799D /* data_dictionary_root_1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB419DFEE5300FE799D /* data_dictionary_root_1.plist */; };
+		6B0A4BC119DFEE5300FE799D /* data_dictionary_root_10.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB519DFEE5300FE799D /* data_dictionary_root_10.json */; };
+		6B0A4BC219DFEE5300FE799D /* data_dictionary_root_10.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB619DFEE5300FE799D /* data_dictionary_root_10.plist */; };
+		6B0A4BC319DFEE5300FE799D /* data_dictionary_root_100.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB719DFEE5300FE799D /* data_dictionary_root_100.json */; };
+		6B0A4BC419DFEE5300FE799D /* data_dictionary_root_100.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB819DFEE5300FE799D /* data_dictionary_root_100.plist */; };
+		6B0A4BC519DFEE5300FE799D /* data_dictionary_root_1000.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BB919DFEE5300FE799D /* data_dictionary_root_1000.json */; };
+		6B0A4BC619DFEE5300FE799D /* data_dictionary_root_1000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BBA19DFEE5300FE799D /* data_dictionary_root_1000.plist */; };
+		6B0A4BC719DFEE5300FE799D /* data_dictionary_root_10000.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BBB19DFEE5300FE799D /* data_dictionary_root_10000.json */; };
+		6B0A4BC819DFEE5300FE799D /* data_dictionary_root_10000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BBC19DFEE5300FE799D /* data_dictionary_root_10000.plist */; };
+		6B0A4BC919DFEE5300FE799D /* data_dictionary_root_100000.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BBD19DFEE5300FE799D /* data_dictionary_root_100000.json */; };
+		6B0A4BCA19DFEE5300FE799D /* data_dictionary_root_100000.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A4BBE19DFEE5300FE799D /* data_dictionary_root_100000.plist */; };
 		6B4B4F3319DF30A50017454E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F3219DF30A50017454E /* main.m */; };
 		6B4B4F4D19DF30A50017454E /* FileDeserializeBenchmarkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F4C19DF30A50017454E /* FileDeserializeBenchmarkingTests.m */; };
 		6B4B4F6219DF37580017454E /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6119DF37580017454E /* ItemModel.m */; };
-		6B4B4F6419DF376B0017454E /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6319DF376B0017454E /* data.plist */; };
-		6B4B4F6619DF377E0017454E /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6519DF377E0017454E /* data.json */; };
 		6B4B4F6C19DF3A910017454E /* JSONFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6919DF3A910017454E /* JSONFileDeserialize.m */; };
 		6B4B4F6D19DF3A910017454E /* PlistFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6B19DF3A910017454E /* PlistFileDeserialize.m */; };
+		6B4B4F7419DFDEEC0017454E /* NSDictionary+FileLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F7319DFDEEC0017454E /* NSDictionary+FileLoad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B0A4BB319DFEE5300FE799D /* data_dictionary_root_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_1.json; sourceTree = "<group>"; };
+		6B0A4BB419DFEE5300FE799D /* data_dictionary_root_1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_1.plist; sourceTree = "<group>"; };
+		6B0A4BB519DFEE5300FE799D /* data_dictionary_root_10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_10.json; sourceTree = "<group>"; };
+		6B0A4BB619DFEE5300FE799D /* data_dictionary_root_10.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_10.plist; sourceTree = "<group>"; };
+		6B0A4BB719DFEE5300FE799D /* data_dictionary_root_100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_100.json; sourceTree = "<group>"; };
+		6B0A4BB819DFEE5300FE799D /* data_dictionary_root_100.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_100.plist; sourceTree = "<group>"; };
+		6B0A4BB919DFEE5300FE799D /* data_dictionary_root_1000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_1000.json; sourceTree = "<group>"; };
+		6B0A4BBA19DFEE5300FE799D /* data_dictionary_root_1000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_1000.plist; sourceTree = "<group>"; };
+		6B0A4BBB19DFEE5300FE799D /* data_dictionary_root_10000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_10000.json; sourceTree = "<group>"; };
+		6B0A4BBC19DFEE5300FE799D /* data_dictionary_root_10000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_10000.plist; sourceTree = "<group>"; };
+		6B0A4BBD19DFEE5300FE799D /* data_dictionary_root_100000.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data_dictionary_root_100000.json; sourceTree = "<group>"; };
+		6B0A4BBE19DFEE5300FE799D /* data_dictionary_root_100000.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_dictionary_root_100000.plist; sourceTree = "<group>"; };
 		6B4B4F2D19DF30A50017454E /* FileDeserializeBenchmarking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileDeserializeBenchmarking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B4B4F3119DF30A50017454E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B4B4F3219DF30A50017454E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,13 +58,14 @@
 		6B4B4F4C19DF30A50017454E /* FileDeserializeBenchmarkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileDeserializeBenchmarkingTests.m; sourceTree = "<group>"; };
 		6B4B4F6019DF37580017454E /* ItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
 		6B4B4F6119DF37580017454E /* ItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
-		6B4B4F6319DF376B0017454E /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
-		6B4B4F6519DF377E0017454E /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		6B4B4F6819DF3A910017454E /* JSONFileDeserialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONFileDeserialize.h; sourceTree = "<group>"; };
 		6B4B4F6919DF3A910017454E /* JSONFileDeserialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONFileDeserialize.m; sourceTree = "<group>"; };
 		6B4B4F6A19DF3A910017454E /* PlistFileDeserialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistFileDeserialize.h; sourceTree = "<group>"; };
 		6B4B4F6B19DF3A910017454E /* PlistFileDeserialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistFileDeserialize.m; sourceTree = "<group>"; };
 		6B4B4F7119DF42440017454E /* FileDeserializeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileDeserializeProtocol.h; sourceTree = "<group>"; };
+		6B4B4F7219DFDEEC0017454E /* NSDictionary+FileLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FileLoad.h"; sourceTree = "<group>"; };
+		6B4B4F7319DFDEEC0017454E /* NSDictionary+FileLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FileLoad.m"; sourceTree = "<group>"; };
+		6B4B4F7619DFE3040017454E /* FileDeserializeBenchmarking_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileDeserializeBenchmarking_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +118,7 @@
 		6B4B4F3019DF30A50017454E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B4B4F7619DFE3040017454E /* FileDeserializeBenchmarking_Prefix.pch */,
 				6B4B4F3119DF30A50017454E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -121,8 +146,18 @@
 			children = (
 				6B4B4F6019DF37580017454E /* ItemModel.h */,
 				6B4B4F6119DF37580017454E /* ItemModel.m */,
-				6B4B4F6319DF376B0017454E /* data.plist */,
-				6B4B4F6519DF377E0017454E /* data.json */,
+				6B0A4BB319DFEE5300FE799D /* data_dictionary_root_1.json */,
+				6B0A4BB419DFEE5300FE799D /* data_dictionary_root_1.plist */,
+				6B0A4BB519DFEE5300FE799D /* data_dictionary_root_10.json */,
+				6B0A4BB619DFEE5300FE799D /* data_dictionary_root_10.plist */,
+				6B0A4BB719DFEE5300FE799D /* data_dictionary_root_100.json */,
+				6B0A4BB819DFEE5300FE799D /* data_dictionary_root_100.plist */,
+				6B0A4BB919DFEE5300FE799D /* data_dictionary_root_1000.json */,
+				6B0A4BBA19DFEE5300FE799D /* data_dictionary_root_1000.plist */,
+				6B0A4BBB19DFEE5300FE799D /* data_dictionary_root_10000.json */,
+				6B0A4BBC19DFEE5300FE799D /* data_dictionary_root_10000.plist */,
+				6B0A4BBD19DFEE5300FE799D /* data_dictionary_root_100000.json */,
+				6B0A4BBE19DFEE5300FE799D /* data_dictionary_root_100000.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -135,6 +170,8 @@
 				6B4B4F6919DF3A910017454E /* JSONFileDeserialize.m */,
 				6B4B4F6A19DF3A910017454E /* PlistFileDeserialize.h */,
 				6B4B4F6B19DF3A910017454E /* PlistFileDeserialize.m */,
+				6B4B4F7219DFDEEC0017454E /* NSDictionary+FileLoad.h */,
+				6B4B4F7319DFDEEC0017454E /* NSDictionary+FileLoad.m */,
 			);
 			path = FileDeserialize;
 			sourceTree = "<group>";
@@ -219,8 +256,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4B4F6419DF376B0017454E /* data.plist in Resources */,
-				6B4B4F6619DF377E0017454E /* data.json in Resources */,
+				6B0A4BC019DFEE5300FE799D /* data_dictionary_root_1.plist in Resources */,
+				6B0A4BC219DFEE5300FE799D /* data_dictionary_root_10.plist in Resources */,
+				6B0A4BC719DFEE5300FE799D /* data_dictionary_root_10000.json in Resources */,
+				6B0A4BBF19DFEE5300FE799D /* data_dictionary_root_1.json in Resources */,
+				6B0A4BC919DFEE5300FE799D /* data_dictionary_root_100000.json in Resources */,
+				6B0A4BC619DFEE5300FE799D /* data_dictionary_root_1000.plist in Resources */,
+				6B0A4BC319DFEE5300FE799D /* data_dictionary_root_100.json in Resources */,
+				6B0A4BC819DFEE5300FE799D /* data_dictionary_root_10000.plist in Resources */,
+				6B0A4BC419DFEE5300FE799D /* data_dictionary_root_100.plist in Resources */,
+				6B0A4BC119DFEE5300FE799D /* data_dictionary_root_10.json in Resources */,
+				6B0A4BC519DFEE5300FE799D /* data_dictionary_root_1000.json in Resources */,
+				6B0A4BCA19DFEE5300FE799D /* data_dictionary_root_100000.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +287,7 @@
 			files = (
 				6B4B4F6219DF37580017454E /* ItemModel.m in Sources */,
 				6B4B4F6C19DF3A910017454E /* JSONFileDeserialize.m in Sources */,
+				6B4B4F7419DFDEEC0017454E /* NSDictionary+FileLoad.m in Sources */,
 				6B4B4F3319DF30A50017454E /* main.m in Sources */,
 				6B4B4F6D19DF3A910017454E /* PlistFileDeserialize.m in Sources */,
 			);
@@ -345,6 +393,8 @@
 		6B4B4F5119DF30A50017454E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FileDeserializeBenchmarking_Prefix.pch;
 				INFOPLIST_FILE = FileDeserializeBenchmarking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -355,6 +405,8 @@
 		6B4B4F5219DF30A50017454E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FileDeserializeBenchmarking_Prefix.pch;
 				INFOPLIST_FILE = FileDeserializeBenchmarking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -415,6 +467,7 @@
 				6B4B4F5219DF30A50017454E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B4B4F5319DF30A50017454E /* Build configuration list for PBXNativeTarget "FileDeserializeBenchmarkingTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +476,7 @@
 				6B4B4F5519DF30A50017454E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

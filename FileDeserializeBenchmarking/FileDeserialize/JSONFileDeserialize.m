@@ -7,7 +7,7 @@
 //
 
 #import "JSONFileDeserialize.h"
-#import "ItemModel.h"
+
 
 @interface JSONFileDeserialize ()
 
@@ -19,23 +19,9 @@
 {
 	NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
 														 ofType:@"json"];
-	NSError *error = nil;
-	NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+	NSDictionary *jsonDict = [NSDictionary dp_dictionaryWithContentsOfJSONFile:filePath];
 	
-	id object = [NSJSONSerialization JSONObjectWithData:JSONData
-												options:NSJSONReadingAllowFragments
-												  error:&error];
-	
-	if(nil != error){
-		NSLog(@"Error: %@", error);
-		return nil;
-	}
-	
-	if (NO == [object isKindOfClass:[NSDictionary class]]) {
-		return nil;
-	}
-	
-	id list = [object objectForKey:@"List"];
+	id list = [jsonDict objectForKey:@"List"];
 	if(NO == [list isKindOfClass:[NSArray class]]) {
 		return nil;
 	}

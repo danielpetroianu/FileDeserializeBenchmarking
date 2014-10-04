@@ -10,4 +10,26 @@
 
 @implementation PlistFileDeserialize
 
+- (NSDictionary *)deserializeFile:(NSString *)fileName
+{
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
+														 ofType:@"plist"];
+	
+	NSDictionary *plistDict = [NSDictionary dp_dictionaryWithContentsOfPlistFile:filePath];
+	
+	id list = [plistDict objectForKey:@"List"];
+	if(NO == [list isKindOfClass:[NSArray class]]) {
+		return nil;
+	}
+	
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[(NSArray *)list count]];
+	for (NSDictionary *itemDictionary in list) {
+		[array addObject:[[ItemModel alloc] initWithDictionary:itemDictionary]];
+	}
+	
+	return @{
+		@"List": [NSArray arrayWithArray:array]
+	};
+}
+
 @end

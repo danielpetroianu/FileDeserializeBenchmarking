@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Petroianu Daniel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "FileDeserializeProtocol.h"
 
 @interface JSONFileDeserialize : NSObject <FileDeserializeProtocol>

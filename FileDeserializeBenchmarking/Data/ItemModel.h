@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Petroianu Daniel. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface ItemModel : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)aDictionary;
