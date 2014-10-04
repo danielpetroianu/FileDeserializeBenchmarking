@@ -23,7 +23,7 @@ void benchmarkFileLoadJSON(NSString *fileName)
 			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfJSONFile:filePath];
 		}
 	});
-	NSLog(@"file:'%@.json' opened in avg. time:  %10llu ns", fileName, t);
+	NSLog(@"file:'%30s.json'  opened in avg. time: %10llu ns", [fileName UTF8String], t);
 }
 
 void benchmarkFileLoadPlist(NSString *fileName)
@@ -35,7 +35,7 @@ void benchmarkFileLoadPlist(NSString *fileName)
 			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfPlistFile:filePath];
 		}
 	});
-	NSLog(@"file:'%@.plist' opened in avg. time: %10llu ns", fileName, t);
+	NSLog(@"file:'%30s.plist' opened in avg. time: %10llu ns", [fileName UTF8String], t);
 }
 
 void benchmarkDeserialize(id<FileDeserializeProtocol> deserializer, NSString *fileName)
@@ -45,7 +45,7 @@ void benchmarkDeserialize(id<FileDeserializeProtocol> deserializer, NSString *fi
 			__unused NSDictionary *result = [deserializer deserializeFile:fileName];
 		}
 	});
-	NSLog(@"%-20s file:'%@' avg. runtime: %10llu ns", [NSStringFromClass([deserializer class]) UTF8String], fileName, t);
+	NSLog(@"%-20s file:'%30s' avg. runtime: %10llu ns", [NSStringFromClass([deserializer class]) UTF8String], [fileName UTF8String], t);
 }
 
 void runFileLoadTests()
