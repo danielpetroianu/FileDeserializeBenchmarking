@@ -13,39 +13,30 @@
 #define kNumberOrIterations 1000
 
 extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
+void benchmarkFileLoadJSON(NSString *fileName);
+void benchmarkFileLoadPlist(NSString *fileName);
+void benchmarkDeserialize(id<FileDeserializeProtocol> deserializer, NSString *fileName);
+void runFileLoadTests();
+void runDeserializeTest();
 
-void benchmarkFileLoadJSON(NSString *fileName)
-{
-	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
-		@autoreleasepool {
-			NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
-																 ofType:@"json"];
-			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfJSONFile:filePath];
-		}
-	});
-	NSLog(@"file:'%30s.json'  opened in avg. time: %10llu ns", [fileName UTF8String], t);
-}
+int main(int argc, char * argv[]) {
 
-void benchmarkFileLoadPlist(NSString *fileName)
-{
-	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
-		@autoreleasepool {
-			NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
-																 ofType:@"plist"];
-			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfPlistFile:filePath];
-		}
-	});
-	NSLog(@"file:'%30s.plist' opened in avg. time: %10llu ns", [fileName UTF8String], t);
-}
+	@autoreleasepool {
+		NSLog(@"-========== START TESTING ==========-");
+		NSLog(@"\n");
+		
+		runFileLoadTests();
+		
+		NSLog(@"\n");
+		NSLog(@"\n");
+		
+		runDeserializeTest();
 
-void benchmarkDeserialize(id<FileDeserializeProtocol> deserializer, NSString *fileName)
-{
-	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
-		@autoreleasepool {
-			__unused NSDictionary *result = [deserializer deserializeFile:fileName];
-		}
-	});
-	NSLog(@"%-20s file:'%30s' avg. runtime: %10llu ns", [NSStringFromClass([deserializer class]) UTF8String], [fileName UTF8String], t);
+		NSLog(@"\n");
+		NSLog(@"-========== TEST ENDED ==========-");
+	
+		return 0;
+	}
 }
 
 void runFileLoadTests()
@@ -79,6 +70,31 @@ void runFileLoadTests()
 	NSLog(@"\n");
 	NSLog(@"-========== TEST FILE LOAD ENDED ==========-");
 }
+
+void benchmarkFileLoadJSON(NSString *fileName)
+{
+	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
+		@autoreleasepool {
+			NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
+																 ofType:@"json"];
+			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfJSONFile:filePath];
+		}
+	});
+	NSLog(@"file:'%30s.json'  opened in avg. time: %10llu ns", [fileName UTF8String], t);
+}
+
+void benchmarkFileLoadPlist(NSString *fileName)
+{
+	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
+		@autoreleasepool {
+			NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileName stringByDeletingPathExtension]
+																 ofType:@"plist"];
+			__unused NSDictionary *result = [NSDictionary dp_dictionaryWithContentsOfPlistFile:filePath];
+		}
+	});
+	NSLog(@"file:'%30s.plist' opened in avg. time: %10llu ns", [fileName UTF8String], t);
+}
+
 
 void runDeserializeTest()
 {
@@ -117,22 +133,12 @@ void runDeserializeTest()
 	}
 }
 
-int main(int argc, char * argv[]) {
-
-	@autoreleasepool {
-		NSLog(@"-========== START TESTING ==========-");
-		NSLog(@"\n");
-		
-		runFileLoadTests();
-		
-		NSLog(@"\n");
-		NSLog(@"\n");
-		
-		runDeserializeTest();
-
-		NSLog(@"\n");
-		NSLog(@"-========== TEST ENDED ==========-");
-	
-		return 0;
-	}
+void benchmarkDeserialize(id<FileDeserializeProtocol> deserializer, NSString *fileName)
+{
+	uint64_t t = dispatch_benchmark(kNumberOrIterations, ^{
+		@autoreleasepool {
+			__unused NSDictionary *result = [deserializer deserializeFile:fileName];
+		}
+	});
+	NSLog(@"%-20s file:'%30s' avg. runtime: %10llu ns", [NSStringFromClass([deserializer class]) UTF8String], [fileName UTF8String], t);
 }
