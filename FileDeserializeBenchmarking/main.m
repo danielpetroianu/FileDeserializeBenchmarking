@@ -11,6 +11,7 @@
 #import "PlistFileDeserialize.h"
 
 #define kNumberOrIterations 1000
+#define kMaxDataset 100
 
 extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
 void benchmarkFileLoadJSON(NSString *fileName);
@@ -44,30 +45,13 @@ void runFileLoadTests()
 	NSLog(@"-========== START FILE LOAD TESTING ==========-");
 	NSLog(@"\n");
 	
-	benchmarkFileLoadJSON(@"data_dictionary_root_1");
-	benchmarkFileLoadPlist(@"data_dictionary_root_1");
-	NSLog(@"\n");
+	for(int i = 1; i <= kMaxDataset; i *= 10)
+	{
+		benchmarkFileLoadJSON([NSString stringWithFormat:@"data_dictionary_root_%d", i]);
+		benchmarkFileLoadPlist([NSString stringWithFormat:@"data_dictionary_root_%d", i]);
+		NSLog(@"\n");
+	}
 	
-	benchmarkFileLoadJSON(@"data_dictionary_root_10");
-	benchmarkFileLoadPlist(@"data_dictionary_root_10");
-	NSLog(@"\n");
-	
-	benchmarkFileLoadJSON(@"data_dictionary_root_100");
-	benchmarkFileLoadPlist(@"data_dictionary_root_100");
-	NSLog(@"\n");
-	
-	benchmarkFileLoadJSON(@"data_dictionary_root_1000");
-	benchmarkFileLoadPlist(@"data_dictionary_root_1000");
-	NSLog(@"\n");
-	
-	benchmarkFileLoadJSON(@"data_dictionary_root_10000");
-	benchmarkFileLoadPlist(@"data_dictionary_root_10000");
-	NSLog(@"\n");
-	
-	benchmarkFileLoadJSON(@"data_dictionary_root_100000");
-	benchmarkFileLoadPlist(@"data_dictionary_root_100000");
-	
-	NSLog(@"\n");
 	NSLog(@"-========== TEST FILE LOAD ENDED ==========-");
 }
 
@@ -105,30 +89,13 @@ void runDeserializeTest()
 		JSONFileDeserialize *jsonDeserializer = [[JSONFileDeserialize alloc] init];
 		PlistFileDeserialize *plistDeserializer = [[PlistFileDeserialize alloc] init];
 		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_1");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_1");
-		NSLog(@"\n");
+		for(int i = 1; i <= kMaxDataset; i *= 10)
+		{
+			benchmarkDeserialize(jsonDeserializer, [NSString stringWithFormat:@"data_dictionary_root_%d", i]);
+			benchmarkDeserialize(plistDeserializer, [NSString stringWithFormat:@"data_dictionary_root_%d", i]);
+			NSLog(@"\n");
+		}
 		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_10");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_10");
-		NSLog(@"\n");
-		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_100");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_100");
-		NSLog(@"\n");
-		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_1000");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_1000");
-		NSLog(@"\n");
-		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_10000");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_10000");
-		NSLog(@"\n");
-		
-		benchmarkDeserialize(jsonDeserializer, @"data_dictionary_root_100000");
-		benchmarkDeserialize(plistDeserializer, @"data_dictionary_root_100000");
-		
-		NSLog(@"\n");
 		NSLog(@"-========== TEST DESERIALIZE ENDED ==========-");
 	}
 }
