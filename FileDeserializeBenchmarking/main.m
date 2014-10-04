@@ -7,6 +7,7 @@
 //
 
 #import "NSDictionary+FileLoad.h"
+#import "UIDevice+ModelName.h"
 #import "JSONFileDeserialize.h"
 #import "PlistFileDeserialize.h"
 
@@ -23,7 +24,7 @@ void runDeserializeTest();
 int main(int argc, char * argv[]) {
 
 	@autoreleasepool {
-		NSLog(@"-========== START TESTING ==========-");
+		NSLog(@"-========== START TESTING on %@ ==========-", [UIDevice dp_modelName]);
 		NSLog(@"\n");
 		
 		runFileLoadTests();

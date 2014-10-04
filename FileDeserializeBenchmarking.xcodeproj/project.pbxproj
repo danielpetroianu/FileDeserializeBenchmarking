@@ -25,6 +25,7 @@
 		6B4B4F6C19DF3A910017454E /* JSONFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6919DF3A910017454E /* JSONFileDeserialize.m */; };
 		6B4B4F6D19DF3A910017454E /* PlistFileDeserialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F6B19DF3A910017454E /* PlistFileDeserialize.m */; };
 		6B4B4F7419DFDEEC0017454E /* NSDictionary+FileLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B4F7319DFDEEC0017454E /* NSDictionary+FileLoad.m */; };
+		6BDF75FC19E00927002CDEAC /* UIDevice+ModelName.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF75FB19E00927002CDEAC /* UIDevice+ModelName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		6B4B4F7219DFDEEC0017454E /* NSDictionary+FileLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FileLoad.h"; sourceTree = "<group>"; };
 		6B4B4F7319DFDEEC0017454E /* NSDictionary+FileLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FileLoad.m"; sourceTree = "<group>"; };
 		6B4B4F7619DFE3040017454E /* FileDeserializeBenchmarking_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileDeserializeBenchmarking_Prefix.pch; sourceTree = "<group>"; };
+		6BDF75FA19E00927002CDEAC /* UIDevice+ModelName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ModelName.h"; sourceTree = "<group>"; };
+		6BDF75FB19E00927002CDEAC /* UIDevice+ModelName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ModelName.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				6B4B4F5F19DF37430017454E /* Data */,
 				6B4B4F3219DF30A50017454E /* main.m */,
 				6B4B4F3019DF30A50017454E /* Supporting Files */,
+				6BDF75FA19E00927002CDEAC /* UIDevice+ModelName.h */,
+				6BDF75FB19E00927002CDEAC /* UIDevice+ModelName.m */,
 			);
 			path = FileDeserializeBenchmarking;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			files = (
 				6B4B4F6219DF37580017454E /* ItemModel.m in Sources */,
 				6B4B4F6C19DF3A910017454E /* JSONFileDeserialize.m in Sources */,
+				6BDF75FC19E00927002CDEAC /* UIDevice+ModelName.m in Sources */,
 				6B4B4F7419DFDEEC0017454E /* NSDictionary+FileLoad.m in Sources */,
 				6B4B4F3319DF30A50017454E /* main.m in Sources */,
 				6B4B4F6D19DF3A910017454E /* PlistFileDeserialize.m in Sources */,

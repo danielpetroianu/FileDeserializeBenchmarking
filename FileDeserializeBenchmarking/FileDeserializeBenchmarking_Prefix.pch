@@ -9,7 +9,10 @@
 #ifdef __OBJC__
 
 #import <Foundation/Foundation.h>
+
 #import "NSDictionary+FileLoad.h"
 #import "ItemModel.h"
+
+#import "UIDevice+ModelName.h"
 
 #endif
